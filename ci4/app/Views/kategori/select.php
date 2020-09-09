@@ -7,12 +7,12 @@
 
     <?php foreach($kategori as $key => $value): ?>
         <h2>
-            <?= $value?>
+            <?= $value['kategori']?>
         </h2>
     <?php endforeach; ?>
 
     <h1>
-        <?= $kategori[1] ?>
+        <?= $kategori[1]['kategori'] ?>
     </h1>
 
 <?= $this->endSection() ?>
