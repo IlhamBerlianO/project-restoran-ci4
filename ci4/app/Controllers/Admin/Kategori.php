@@ -17,9 +17,7 @@ class Kategori extends BaseController
 			'kategori' => ['Makanan', 'Minuman', 'Jajan', 'Gorengan', 'Buah']
 		];
 
-		echo view ("template/header");
-		echo view ("kategori/select", $data);
-		echo view ("template/footer");
+		return view ("kategori/select", $data);
 	}
 
 	public function selectWhere($id=null)
@@ -29,9 +27,7 @@ class Kategori extends BaseController
 
 	public function formInsert()
 	{
-		echo view ("template/header");
-		echo view ("kategori/forminsert");
-		echo view ("template/footer");
+		return view ("kategori/forminsert");
 	}
 
 	public function formUpdate($id=null)
