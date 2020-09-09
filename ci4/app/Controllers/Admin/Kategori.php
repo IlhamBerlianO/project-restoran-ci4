@@ -12,12 +12,12 @@ class Kategori extends BaseController
 
 	public function select()
 	{
-		echo "Menampilkan semua data";
+		echo "<h1>Menampilkan semua data</h1>";
 	}
 
 	public function selectWhere($id=null)
 	{
-		echo "Menampilkan semua data yang dipilih";
+		echo "<h1>Menampilkan semua data yang dipilih $id</h1>";
 	}
 
 	public function formInsert()
