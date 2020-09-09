@@ -36,8 +36,8 @@ $routes->setAutoRoute(true);
 
 $routes->group('admin', function($routes){
 
-	$routes->add('kategori/form','Admin\Kategori::formInsert');
 	$routes->add('kategori','Admin\Kategori::select');
+	$routes->add('kategori/form','Admin\Kategori::formInsert');
 	$routes->add('kategori/update/(:any)','Admin\Kategori::formUpdate/$1');
 
 });

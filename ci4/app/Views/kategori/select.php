@@ -1,2 +1,13 @@
-<h1>SELECT DATA KATEGORI</h1>
-<h2>Ini adalah view yang dipanggil</h2>
+<h1>
+    <?= $judul;?>
+</h1>
+
+<?php foreach($kategori as $key => $value): ?>
+    <h2>
+        <?= $value?>
+    </h2>
+<?php endforeach; ?>
+
+<h1>
+    <?= $kategori[1] ?>
+</h1>

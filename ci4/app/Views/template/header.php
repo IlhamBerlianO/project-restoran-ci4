@@ -9,9 +9,9 @@
     
 <nav>
     <ul>
-        <a href="<?= base_url()?> /admin/kategori"> <li>Select</li> </a>
-        <a href="<?= base_url()?> /admin/kategori/form"> <li>Insert</li> </a>
-        <a href="<?= base_url()?> /admin/kategori/update/5"> <li>Update</li> </a>
+        <a href="<?= base_url() ?>/admin/kategori"> <li>Select</li> </a>
+        <a href="<?= base_url() ?>/admin/kategori/form"> <li>Insert</li> </a>
+        <a href="<?= base_url() ?>/admin/kategori/update/5"> <li>Update</li> </a>
     </ul>
 
 </nav>
