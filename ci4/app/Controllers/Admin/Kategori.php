@@ -22,12 +22,12 @@ class Kategori extends BaseController
 
 	public function formInsert()
 	{
-		echo "Menampilkan form insert";
+		echo "<h1>Menampilkan form insert</h1>";
 	}
 
-	public function formUpdate()
+	public function formUpdate($id=null)
 	{
-		echo "Menampilkan form update";
+		echo "<h1>Menampilkan form update $id<h1>";
 	}
 
 	public function update($id=null)
