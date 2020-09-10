@@ -11,6 +11,7 @@
             <th>Kategori</th>
             <th>Keterangan</th>
             <th>Hapus</th>
+            <th>Ubah</th>
         </tr>
 
         <?php $no=1 ?>
@@ -21,6 +22,9 @@
                 <td><?= $value['keterangan']?></td>
                 <td>
                     <a href="<?= base_url()?>/admin/kategori/delete/<?= $value['idkategori']?>">Hapus</a>
+                </td>
+                <td>
+                    <a href="<?= base_url()?>/admin/kategori/find/<?= $value['idkategori']?>">Ubah</a>
                 </td>
             </tr>
         <?php endforeach; ?>

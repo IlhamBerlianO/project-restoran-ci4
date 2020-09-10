@@ -17,7 +17,7 @@ class Kategori extends BaseController
 		$kategori = $model -> findAll();
 
 		$data = [
-			'judul' => 'SELECT DATA DARI CONTROLLER',
+			'judul' => 'DATA KATEGORI',
 			'kategori' => $kategori
 		];
 
@@ -44,15 +44,23 @@ class Kategori extends BaseController
 
 	public function find($id=null)
 	{
-		// echo view ("template/header");
-		// echo view ("kategori/update");
-		// echo view ("template/footer");
-		echo "<h1>Update Data</h1>";
+		$model = new Kategori_M();
+		$kategori = $model -> find($id);
+
+		$data = [
+			'judul' => 'UPDATE DATA',
+			'kategori' => $kategori
+		];
+
+		return view ("kategori/update", $data);
 	}
 
-	public function update($id=null)
+	public function update()
 	{
-		echo "Prses update data $id";
+		$model = new Kategori_M();
+		$model -> save($_POST);
+
+		return redirect()->to(base_url()."/admin/kategori");
 	}
 
 	public function delete($id=null)
