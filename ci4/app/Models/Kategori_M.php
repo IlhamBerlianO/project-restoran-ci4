@@ -7,6 +7,7 @@
     {
         protected $table = 'tblkategori';
         protected $allowedFields = ['kategori', 'keterangan'];
+        protected $primaryKey = 'idkategori';
     }
     
 

@@ -57,7 +57,10 @@ class Kategori extends BaseController
 
 	public function delete($id=null)
 	{
-		echo "Proses delete data";
+		$model = new Kategori_M();
+		$model -> delete($id);
+
+		return redirect()->to(base_url()."/admin/kategori");
 	}
 	
 	//--------------------------------------------------------------------
