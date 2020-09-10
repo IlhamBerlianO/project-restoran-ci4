@@ -5,14 +5,21 @@
         <?= $judul;?>
     </h1>
 
-    <?php foreach($kategori as $key => $value): ?>
-        <h2>
-            <?= $value['kategori']?>
-        </h2>
-    <?php endforeach; ?>
-
-    <h1>
-        <?= $kategori[1]['kategori'] ?>
-    </h1>
+    <table border="1px">
+        <tr>
+            <th>No</th>
+            <th>Kategori</th>
+            <th>Keterangan</th>
+        </tr>
+        
+        <?php $no=1 ?>
+        <?php foreach($kategori as $key => $value): ?>
+            <tr>
+                <td><?= $no++ ?></td>
+                <td><?= $value['kategori']?></td>
+                <td><?= $value['keterangan']?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
 
 <?= $this->endSection() ?>
