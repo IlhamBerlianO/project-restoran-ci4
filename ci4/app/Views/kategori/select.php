@@ -1,6 +1,8 @@
 <?= $this->extend('template/admin') ?>
 <?= $this->section('content') ?>
 
+<a href="<?= base_url('/admin/kategori/create') ?>">TAMBAH DATA</a>
+
     <h1>
         <?= $judul;?>
     </h1>

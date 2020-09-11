@@ -8,8 +8,15 @@
 <body>
     <nav>
         <ul>
-            <a href="<?= base_url() ?>/admin/kategori"> <li>Select</li> </a>
-            <a href="<?= base_url() ?>/admin/kategori/create"> <li>Insert</li> </a>
+            <a href="<?= base_url('/admin') ?>"> 
+                <li>Home</li> 
+            </a>
+            <a href="<?= base_url('/admin/kategori') ?>"> 
+                <li>Kategori</li> 
+            </a>
+            <a href="<?= base_url('/admin/menu') ?>"> 
+                <li>Menu</li> 
+            </a>
         </ul>
     </nav>
     <?= $this->renderSection('content') ?>

@@ -39,7 +39,7 @@ class Kategori extends BaseController
 		$model = new Kategori_M();
 		$model -> insert($_POST);
 
-		return redirect()->to(base_url()."/admin/kategori");
+		return redirect()->to(base_url("/admin/kategori"));
 	}
 
 	public function find($id=null)
@@ -60,7 +60,7 @@ class Kategori extends BaseController
 		$model = new Kategori_M();
 		$model -> save($_POST);
 
-		return redirect()->to(base_url()."/admin/kategori");
+		return redirect()->to(base_url("/admin/kategori"));
 	}
 
 	public function delete($id=null)
@@ -68,7 +68,7 @@ class Kategori extends BaseController
 		$model = new Kategori_M();
 		$model -> delete($id);
 
-		return redirect()->to(base_url()."/admin/kategori");
+		return redirect()->to(base_url("/admin/kategori"));
 	}
 	
 	//--------------------------------------------------------------------
