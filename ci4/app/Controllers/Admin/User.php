@@ -6,7 +6,7 @@ class User extends BaseController
 {
     protected $session=null;
 
-    public function __construct()
+    public function __construct() 
     {
         $this->session = \Config\Services::session();
     }

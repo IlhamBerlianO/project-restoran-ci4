@@ -7,27 +7,21 @@ class Kategori extends BaseController
 {
 	public function index()
 	{
-		// return view('welcome_message');
 		echo "<h1>Belajar CI4</h1>";
 	}
 
 	public function read()
 	{
-		$model = new Kategori_M();
+		$model    = new Kategori_M();
 		$kategori = $model -> findAll();
 
 		$data = [
-			'judul' => 'DATA KATEGORI',
+			'judul'    => 'DATA KATEGORI',
 			'kategori' => $kategori
 		];
 
 		return view ("kategori/select", $data);
 	}
-
-	// public function selectWhere($id=null)
-	// {
-	// 	echo "<h1>Menampilkan semua data yang dipilih $id</h1>";
-	// }
 
 	public function create()
 	{
@@ -37,18 +31,22 @@ class Kategori extends BaseController
 	public function insert()
 	{
 		$model = new Kategori_M();
-		$model -> insert($_POST);
 
-		return redirect()->to(base_url("/admin/kategori"));
+		if ($model -> insert($_POST)===false) {
+			$error = $model->errors();
+			echo $error['kategori'];
+		} else {
+			return redirect()->to(base_url("/admin/kategori"));
+		}
 	}
 
 	public function find($id=null)
 	{
-		$model = new Kategori_M();
+		$model    = new Kategori_M();
 		$kategori = $model -> find($id);
 
 		$data = [
-			'judul' => 'UPDATE DATA',
+			'judul'    => 'UPDATE DATA',
 			'kategori' => $kategori
 		];
 
