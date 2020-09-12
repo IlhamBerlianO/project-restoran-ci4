@@ -12,12 +12,13 @@ class Kategori extends BaseController
 
 	public function read()
 	{
-		$model    = new Kategori_M();
-		$kategori = $model -> findAll();
+		$pager = \Config\Services::pager();
+		$model = new Kategori_M();
 
 		$data = [
 			'judul'    => 'DATA KATEGORI',
-			'kategori' => $kategori
+			'kategori' => $model->paginate(2, 'group1'),
+			'pager'    => $model->pager
 		];
 
 		return view ("kategori/select", $data);

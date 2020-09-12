@@ -32,4 +32,6 @@
     <?php endforeach; ?>
 </table>
 
+<?= $pager->links('group1', 'bootstrap') ?>
+
 <?= $this->endSection() ?>
