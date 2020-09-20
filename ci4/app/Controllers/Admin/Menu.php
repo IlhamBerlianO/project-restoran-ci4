@@ -1,6 +1,7 @@
 <?php namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\Kategori_M;
 
 class Menu extends BaseController
 {
@@ -20,15 +21,16 @@ class Menu extends BaseController
 		echo $name." Sudah Di Upload";
 	}
 
-	// public function select()
-	// {
-	// 	echo "<h1>untuk menampilkan data</h1>";
-	// }
-	
-	// public function update($id=null,$nama=null)
-	// {
-	// 	echo "<h1>untuk update data dengan id : $id  $nama</h1>";
-	// }
+	public function option()
+	{
+		$model = new Kategori_M();
+		$kategori = $model->findAll();
+		$data = [
+			'kategori' => $kategori
+		];
+
+		return view('template/option',$data);
+	}
 
 	//--------------------------------------------------------------------
 
