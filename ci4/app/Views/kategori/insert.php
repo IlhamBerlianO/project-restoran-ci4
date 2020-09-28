@@ -18,7 +18,7 @@
     </div>
 
     <div class="col-8">
-        <form action="<?= base_url()?>/admin/kategori/insert" method="post">
+        <form action="<?= base_url('/admin/kategori/insert') ?>" method="post">
             <div class="form-group">
                 <label for="Kategori">Kategori</label>
                 <input type="text" name="kategori" class="form-control" required>
