@@ -18,7 +18,7 @@ class Menu extends BaseController
 
 		$file->move('./upload');
 
-		echo $name." Sudah Di Upload";
+		echo $name . " Sudah Di Upload";
 	}
 
 	public function option()

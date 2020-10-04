@@ -14,7 +14,7 @@
     </div>
 
     <div class="col">
-        <h2>INSERT DATA</h2>
+        <h2>INSERT KATEGORI</h2>
     </div>
 
     <div class="col-8">
@@ -30,7 +30,7 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="SIMPAN" name="simpan">
+                <input type="submit" value="SIMPAN" name="simpan" class="btn btn-primary"> 
             </div>
         </form>
     </div>
