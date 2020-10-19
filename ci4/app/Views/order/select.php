@@ -7,6 +7,17 @@
     </div>
 </div>
 
+<?php 
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+        $jumlah = 3;
+        $no = ($jumlah * $page)  - $jumlah + 1;
+    }else{
+        $no=1;
+    }
+?>
+
+
 <div class="row mt-2">
     <div class="col">
         <table class="table">
@@ -20,8 +31,7 @@
                 <th>Kembalian</th>
                 <th>Status</th>
             </tr>
-
-            <?php $no = 1 ?>
+            
             <?php foreach($order as $value) : ?>
                 <tr>
                     <td><?= $no++ ?></td>
@@ -35,7 +45,7 @@
                         if ($value['status']==1) {
                             $status="LUNAS";
                         } else {
-                            $status="BAYAR";
+                            $status="<a href='" . base_url("/admin/order/find") . "/" . $value['idorder'] ."'>BAYAR</a>";
                         }
                         
                     ?>
@@ -43,6 +53,9 @@
                 </tr>
             <?php endforeach; ?>
         </table>
+
+        <?= $pager->makeLinks(1, $perPage, $total, 'bootstrap') ?>
+
     </div>
 </div>
 
