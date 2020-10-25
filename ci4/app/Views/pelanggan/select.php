@@ -49,7 +49,6 @@
                         } else {
                             $aktif="NON AKTIF";
                         }
-                        
                     ?>
                     <td>
                         <a href="<?= base_url()?>/admin/pelanggan/update/<?= $value['idpelanggan']?>/<?= $value['aktif']?>">

@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
     <div class="col">
-    <?php
+        <?php
             if (!empty(session()->getFlashdata('info'))) {
                 echo '<div class="alert alert-danger" role="alert">';
                 $error = session()->getFlashdata('info');

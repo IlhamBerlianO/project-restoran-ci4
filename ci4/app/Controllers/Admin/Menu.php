@@ -90,7 +90,6 @@ class Menu extends BaseController
             $file->move('./upload');
             return redirect()->to(base_url("/admin/menu"));
         }
-        
     }
     
     public function find($id=null)
@@ -140,7 +139,6 @@ class Menu extends BaseController
         } else {
             return redirect()->to(base_url("/admin/menu"));
         }
-        
         
     }
     
