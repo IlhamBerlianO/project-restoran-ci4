@@ -11,6 +11,7 @@ class Filters extends BaseConfig
 		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
 		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
 		'Auth'     => \App\Filters\Auth::class,
+		'Auth2'     => \App\Filters\Auth::class,
 	];
 
 	// Always applied before every request

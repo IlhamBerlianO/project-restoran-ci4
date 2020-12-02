@@ -23,6 +23,11 @@
                 'numeric' => 'Harus Angka'
             ]
         ];
+        
+    public function getProduct($id)
+    {
+        return $this->db->table($this->table)->where('idmenu', $id)->get()->getRowArray();
+    }
     }
 
 ?>

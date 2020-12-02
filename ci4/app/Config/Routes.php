@@ -32,6 +32,27 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('dashboard', 'Admin\Login::index');
 
+$routes->group('/',function($routes){
+	$routes->add('logout','Auth::logout');
+	$routes->add('keranjang','Cart::index');
+	$routes->add('login','Auth::viewlogin');
+	$routes->add('authlogin','Auth::authlogin');
+	$routes->add('register','Auth::viewregister');
+	$routes->add('hapus/(:any)','Cart::hapus/$1');
+	$routes->add('authregister','Auth::authregister');
+	$routes->add('keranjang/plus/(:any)/(:any)', 'Cart::plus/$1/$2');
+	$routes->add('keranjang/minus/(:any)/(:any)', 'Cart::minus/$1/$2');
+	$routes->add('tambah-ke-keranjang/(:any)','Cart::tambah_ke_keranjang/$1');
+});
+
+$routes->group('/',['filter' => 'Auth2'],function($routes){
+	$routes->add('checkout','Checkout::index');
+	$routes->add('bayar', 'Cart::insertorder');
+	$routes->add('history', 'History::index');
+	$routes->add('success', 'Checkout::sukses');
+});
+
+
 // $routes->get('ilham/(:any)', 'Admin\Kategori::selectWhere/$1');
 
 $routes->group('admin', ['filter' => 'Auth'], function($routes){

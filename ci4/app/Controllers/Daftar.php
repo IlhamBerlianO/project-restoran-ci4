@@ -1,11 +1,11 @@
 <?php namespace App\Controllers;
 
-class Login extends BaseController
+class Daftar extends BaseController
 {
 	public function index()
 	{
-		// return view('welcome_message');
-		return view('front/login');
+		return view('template/daftar');
+		
 	}
 
 	//--------------------------------------------------------------------

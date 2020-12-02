@@ -3,7 +3,7 @@
 use App\Models\Kategori_M;
 use App\Models\Menu_M;
 
-class Home extends BaseController
+class Checkout extends BaseController
 {
 	public function index()
 	{
@@ -18,12 +18,23 @@ class Home extends BaseController
 			'menu'	=> $menu,
 			'cart' => $cart->contents(),
 			'total' => $cart->total(),
-			'judul'	=> "RESTORAN CI 4"
+			'judul'	=> "CHECKOUT"
 		];
 
-		return view('Front/Home',$data);
+		return view('front/checkout',$data);
 	}
 
-	//--------------------------------------------------------------------
+	public function sukses()
+	{
+        $cart = \Config\Services::cart();
+        $data = [
+			'cart' => $cart->contents(),
+			'total' => $cart->total(),
+			'judul'	=> "CHECKOUT"
+		];
+
+		return view('front/pembayaransukses',$data);
+	}
+
 
 }

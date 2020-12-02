@@ -1,10 +1,9 @@
 <?php 
 
 namespace App\Controllers\Admin;
-
 use App\Controllers\BaseController;
-use App\Models\Kategori_M;
 use App\Models\Menu_M;
+use App\Models\Kategori_M;
 
 class Menu extends BaseController
 {
